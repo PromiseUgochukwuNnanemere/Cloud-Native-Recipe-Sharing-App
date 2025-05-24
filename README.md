@@ -50,14 +50,18 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
 
 ## 📷 Screenshots
 
-### 🌐 User Interface
-![Frontend UI](images/frontend-ui.png)
+### 🌐 Frontend UI
+![Frontend UI](images/Landing_page_UI.png)
+
+![User Page UI](images/User_page2_UI.png)
+
+![User Page UI](images/Admin_page2_UI.png)
 
 ### ⚙️ AWS Architecture
-![AWS Architecture](images/aws-architecture.png)
+![AWS Architecture](images/AWS_Architecture_for_Recipe-Sharing_App.drawio.png)
 
-### 📜 CloudFormation Stack
-![CloudFormation Stack](images/cloudformation-stack.png)
+# ### 📜 CloudFormation Stack
+# ![CloudFormation Stack](images/cloudformation-stack.png)
 
 ---
 
