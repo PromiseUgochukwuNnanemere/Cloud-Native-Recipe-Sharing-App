@@ -60,6 +60,9 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
 ### ⚙️ AWS Architecture
 ![AWS Architecture](images/AWS_Architecture_for_Recipe-Sharing_App.drawio.png)
 
+### AWS DynamoDB Table
+![AWS DynamoDB Table](images/AWS_DynamoDB_table.png)
+
 ---
 
 ## 🚀 Deployment Instructions
