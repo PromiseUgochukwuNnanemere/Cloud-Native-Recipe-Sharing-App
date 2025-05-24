@@ -81,5 +81,5 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
    git clone https://github.com/PromiseUgochukwuNnanemere/Cloud-Native-Recipe-Sharing-App.git
    cd Cloud-Native-Recipe-Sharing-App/platform
    
-2.  
+   
 
