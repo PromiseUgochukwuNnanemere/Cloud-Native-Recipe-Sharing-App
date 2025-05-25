@@ -142,7 +142,8 @@ npm run dev
    ✅ S3 + CloudFront for static hosting
    
    ✅ DynamoDB for NoSQL storage
-
+   
+---
 
 ## 📂 Project Structure
 
