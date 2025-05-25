@@ -111,52 +111,65 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
    
 ## 🧪 Local Development
 
-### Backend (FastAPI)
+**Backend (FastAPI)**
 
-```bash
 cd backend/
 pip install -r requirements.txt
 uvicorn main:app --reload
 
 
-### Frontend (React)
+**Frontend (React)**
+
+cd frontend/
+npm install
+npm run dev
+
+---
 
 ## 🧱 Cloud Architecture Overview
+   ✅ 1 VPC
+   
+   ✅ 2 public + 2 private subnets
+   
+   ✅ 1 NAT Gateway
+   
+   ✅ 1 EC2 instance (private subnet)
+   
+   ✅ 1 Application Load Balancer
+   
+   ✅ IAM roles for backend instance access
+   
+   ✅ S3 + CloudFront for static hosting
+   
+   ✅ DynamoDB for NoSQL storage
 
-✅ 1 VPC
-
-✅ 2 public + 2 private subnets
-
-✅ 1 NAT Gateway
-
-✅ 1 EC2 instance (private subnet)
-
-✅ 1 Application Load Balancer
-
-✅ IAM roles for backend instance access
-
-✅ S3 + CloudFront for static hosting
-
-✅ DynamoDB for NoSQL storage
 
 ## 📂 Project Structure
 
+Cloud-Native-Recipe-Sharing-App/
+├── backend/
+│   ├── main.py
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── dist/
+│   ├── index.html
+│   └── package.json
+├── platform/
+│   ├── ch3-https.yaml
+│   └── ch3-https-complete.yaml
+└── README.md
+---
 
-## 📄 License
+## 👨‍💻 Author
 
-## 🙋‍♂️ Author
+**Promise Ugochukwu Nnanemere**  
+AWS Certified Solutions Architect Associate  
+[LinkedIn](https://linkedin.com/in/promiseugochukwunnanemere)
 
-Promise Ugochukwu Nnanemere
-[LinkedIn](https://www.linkedin.com/in/promiseugochukwunnanemere/)
-[GitHub](https://github.com/PromiseUgochukwuNnanemere)
+---
 
+## 📜 License
 
-
-
-
-```bash
-cd backend/
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-   
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
