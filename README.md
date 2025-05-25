@@ -147,8 +147,8 @@ uvicorn main:app --reload
 ## 🙋‍♂️ Author
 
 Promise Ugochukwu Nnanemere
-![LinkedIn](https://www.linkedin.com/in/promiseugochukwunnanemere/)
-![GitHub](https://github.com/PromiseUgochukwuNnanemere)
+[LinkedIn](https://www.linkedin.com/in/promiseugochukwunnanemere/)
+[GitHub](https://github.com/PromiseUgochukwuNnanemere)
 
 
 
