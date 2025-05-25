@@ -80,6 +80,13 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
    ```bash
    git clone https://github.com/PromiseUgochukwuNnanemere/Cloud-Native-Recipe-Sharing-App.git
    cd Cloud-Native-Recipe-Sharing-App/platform
-   
-   
+ 
+2. Launch CloudFormation:
+   Deploy using the complete template with HTTPS:
 
+   aws cloudformation deploy \
+  --template-file ch3-https-complete.yaml \
+  --stack-name recipe-app-stack \
+  --capabilities CAPABILITY_NAMED_IAM
+
+4. 
