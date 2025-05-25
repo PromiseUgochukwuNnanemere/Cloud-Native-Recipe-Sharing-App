@@ -82,11 +82,81 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
    cd Cloud-Native-Recipe-Sharing-App/platform
  
 2. Launch CloudFormation:
-   Deploy using the complete template with HTTPS:
+   Deploy using the complete template with HTTPS: 
 
+   ```bash 
    aws cloudformation deploy \
-  --template-file ch3-https-complete.yaml \
-  --stack-name recipe-app-stack \
-  --capabilities CAPABILITY_NAMED_IAM
+   --template-file ch3-https-complete.yaml \
+   --stack-name recipe-app-stack \
+   --capabilities CAPABILITY_NAMED_IAM
 
-4. 
+3. Upload your frontend build to S3:
+   
+   ```bash
+   cd ../frontend
+   npm install
+   npm run build
+   aws s3 sync dist/ s3://your-s3-bucket-name
+
+ 4. Invalidate CloudFront cache:
+    
+    ```bash
+    aws cloudfront create-invalidation \
+    --distribution-id YOUR_DISTRIBUTION_ID \
+    --paths "/*"
+
+ 5. Verify application via your custom domain (with HTTPS)
+
+---
+   
+## 🧪 Local Development
+
+### Backend (FastAPI)
+
+```bash
+cd backend/
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+
+### Frontend (React)
+
+## 🧱 Cloud Architecture Overview
+
+✅ 1 VPC
+
+✅ 2 public + 2 private subnets
+
+✅ 1 NAT Gateway
+
+✅ 1 EC2 instance (private subnet)
+
+✅ 1 Application Load Balancer
+
+✅ IAM roles for backend instance access
+
+✅ S3 + CloudFront for static hosting
+
+✅ DynamoDB for NoSQL storage
+
+## 📂 Project Structure
+
+
+## 📄 License
+
+## 🙋‍♂️ Author
+
+Promise Ugochukwu Nnanemere
+![LinkedIn](https://www.linkedin.com/in/promiseugochukwunnanemere/)
+![GitHub](https://github.com/PromiseUgochukwuNnanemere)
+
+
+
+
+
+```bash
+cd backend/
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+   
