@@ -116,17 +116,18 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
 
 **Backend (FastAPI)**
 
+``` bash 
 cd backend/
 pip install -r requirements.txt
 uvicorn main:app --reload
-
+```
 
 **Frontend (React)**
-
+```bash
 cd frontend/
 npm install
 npm run dev
-
+```
 ---
 
 ## 🧱 Cloud Architecture Overview
