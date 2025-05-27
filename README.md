@@ -149,26 +149,6 @@ npm run dev
    
 ---
 
-## 📂 Project Structure
-
-```pgsql
-Cloud-Native-Recipe-Sharing-App/
-├── backend/
-│   ├── main.py
-│   └── requirements.txt
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   ├── dist/
-│   ├── index.html
-│   └── package.json
-├── platform/
-│   ├── ch3-https.yaml
-│   └── ch3-https-complete.yaml
-└── README.md
-```
----
-
 ## 📌 Future Enhancements
 
 - Provision API using AWS Auto Scaling groups (ASGs)
