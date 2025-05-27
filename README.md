@@ -151,6 +151,7 @@ npm run dev
 
 ## 📂 Project Structure
 
+```
 Cloud-Native-Recipe-Sharing-App/
 ├── backend/
 │   ├── main.py
@@ -165,6 +166,8 @@ Cloud-Native-Recipe-Sharing-App/
 │   ├── ch3-https.yaml
 │   └── ch3-https-complete.yaml
 └── README.md
+
+```
 ---
 
 ## 📌 Future Enhancements
