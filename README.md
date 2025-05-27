@@ -60,6 +60,9 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
 ### ⚙️ AWS Architecture
 ![AWS Architecture](images/AWS_Architecture_for_Recipe-Sharing_App.drawio.png)
 
+### AWS DynamoDB Table
+![AWS DynamoDB Table](images/AWS_DynamoDB_table.png)
+
 ---
 
 ## 🚀 Deployment Instructions
@@ -74,6 +77,100 @@ The frontend is built with **React.js** and hosted via **Amazon S3** with global
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/Cloud-Native-Recipe-Sharing-App.git
-cd Cloud-Native-Recipe-Sharing-App/platform
+   ```bash
+   git clone https://github.com/PromiseUgochukwuNnanemere/Cloud-Native-Recipe-Sharing-App.git
+   cd Cloud-Native-Recipe-Sharing-App/platform
+ 
+2. Launch CloudFormation:
+   Deploy using the complete template with HTTPS: 
+
+   ```bash 
+   aws cloudformation deploy \
+   --template-file ch3-https-complete.yaml \
+   --stack-name recipe-app-stack \
+   --capabilities CAPABILITY_NAMED_IAM
+
+3. Upload your frontend build to S3:
+   
+   ```bash
+   cd ../frontend
+   npm install
+   npm run build
+   aws s3 sync dist/ s3://your-s3-bucket-name
+
+ 4. Invalidate CloudFront cache:
+    
+    ```bash
+    aws cloudfront create-invalidation \
+    --distribution-id YOUR_DISTRIBUTION_ID \
+    --paths "/*"
+
+ 5. Verify application via your custom domain (with HTTPS)
+
+---
+   
+## 🧪 Local Development
+
+**Backend (FastAPI)**
+
+cd backend/
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+
+**Frontend (React)**
+
+cd frontend/
+npm install
+npm run dev
+
+---
+
+## 🧱 Cloud Architecture Overview
+   ✅ 1 VPC
+   
+   ✅ 2 public + 2 private subnets
+   
+   ✅ 1 NAT Gateway
+   
+   ✅ 1 EC2 instance (private subnet)
+   
+   ✅ 1 Application Load Balancer
+   
+   ✅ IAM roles for backend instance access
+   
+   ✅ S3 + CloudFront for static hosting
+   
+   ✅ DynamoDB for NoSQL storage
+   
+---
+
+## 📂 Project Structure
+
+Cloud-Native-Recipe-Sharing-App/
+├── backend/
+│   ├── main.py
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── dist/
+│   ├── index.html
+│   └── package.json
+├── platform/
+│   ├── ch3-https.yaml
+│   └── ch3-https-complete.yaml
+└── README.md
+---
+
+## 👨‍💻 Author
+
+**Promise Ugochukwu Nnanemere**  
+AWS Certified Solutions Architect Associate  
+[LinkedIn](https://linkedin.com/in/promiseugochukwunnanemere)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
