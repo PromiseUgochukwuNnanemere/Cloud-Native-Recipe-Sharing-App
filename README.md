@@ -151,7 +151,7 @@ npm run dev
 
 ## 📂 Project Structure
 
-```
+```pgsql
 Cloud-Native-Recipe-Sharing-App/
 ├── backend/
 │   ├── main.py
