@@ -166,6 +166,16 @@ Cloud-Native-Recipe-Sharing-App/
 └── README.md
 ---
 
+## 📌 Future Enhancements
+
+- Provision API using AWS Auto Scaling groups (ASGs)
+- Use AWS Amplify for hosting, and to connect the code repository and configure a CI/CD pipeline
+- Use Amazon Cognito to simplify the process of adding user authentication and authorisation to the web and mobile applications.
+- Use CloudWatch Logs for logging and CloudWatch Metrics for monitoring
+- Use DynamoDB Accelerator (DAX) to improve the read performance of DynamoDB by clustered in-memory caching of frequent queries and responses
+
+---
+
 ## 👨‍💻 Author
 
 **Promise Ugochukwu Nnanemere**  
